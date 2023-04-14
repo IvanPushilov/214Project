@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const mainRouter = require('./mainRouter');
+// const authorizationRoutes = require('./authorization.routes');
+const game = require('./game');
+
+router.use('/', mainRouter);
+// router.use('/authorization', authorizationRoutes);
+router.use('/', game);
+
+module.exports = router;
